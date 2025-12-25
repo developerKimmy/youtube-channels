@@ -1,0 +1,23 @@
+type: channel
+search:
+  base_url: "https://www.youtube.com/results"
+  query_param: "search_query"
+  filter_param: "sp"
+  filter_value: "EgIQAg%3D%3D"
+
+selectors:
+  item_container: "ytd-channel-renderer"
+  channel_name: "#channel-title #text"
+  channel_url: "#main-link"
+  subscribers: "#subscribers"
+  video_count: "#video-count"
+  description: "#description"
+
+output:
+  format: "csv"
+  filename: "channels"
+
+options:
+  max_scroll: 10
+  scroll_pause: 2
+  headless: true
